@@ -480,9 +480,9 @@
 
         <div class="input-group">
             <label for="updateIntervalInput">Intervalo de atualização (segundos):</label>
-            <input type="number" id="updateIntervalInput" placeholder="10" min="5" max="60" value="10">
+            <input type="number" id="updateIntervalInput" placeholder="10" min="10" max="60" value="10">
             <small style="color: rgba(255, 255, 255, 0.7); font-size: 10px; display: block; margin-top: 4px;">
-                💡 Intervalos maiores economizam API (mínimo: 5s)
+                💡 Intervalos maiores economizam API (mínimo: 10s)
             </small>
         </div>
 
@@ -703,9 +703,9 @@
             const multiple = document.getElementById("multipleInput").value;
             let updateIntervalSeconds = parseInt(document.getElementById("updateIntervalInput").value);
 
-            // Garantir mínimo de 5 segundos
-            if (!updateIntervalSeconds || updateIntervalSeconds < 5) {
-                updateIntervalSeconds = 5;
+            // Garantir mínimo de 10 segundos
+            if (!updateIntervalSeconds || updateIntervalSeconds < 10) {
+                updateIntervalSeconds = 10;
             }
 
             // Validações
